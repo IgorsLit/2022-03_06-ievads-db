@@ -1,0 +1,16 @@
+﻿Nodarbība 04
+Uzdevums 1 : Datu bāze, tabulas, indeksi un ierobežojumi (constraints)
+Datu bāzes veidošana
+Šīs prakstiskās nodarbības mērķis ir nostiprināt zināšanas par datu bāzes pamatobjektiem un to svarīgām tehniskām īpašībām. Kā arī apgūt vairākus svarīgus DDL (data definition language) operatorus.
+•	Izdomājiet vienkāršu datu bāzes modeli, kurā būtu vismaz divas tabulas. Patiesībā, vairāk tabulu šobrīd arī nevajag, bet, ja kādam ir labas idejas, var būt arī vairāk. Viens no klasiskajiem piemēriem varētu būt mājdzīvnieku datu bāze, kurā ir informācija par mājdzīvniekiem un audzētavām; attiecīgi ir divas tabulas, un relāciju tips ir 0:1<-0:N, jo katrā audzētavā būs dzimuši neviens līdz vairāki dzīvnieki, savukārt var būt arī nezināmas izcelsmes dzīvnieki, kuriem nav norādīta audzētava, bet -- ja tā ir zināma, tad tā var būt tikai viena.
+•	Sagatavojiet datu modeļa aprakstu. Tas var būt vienkārši brīva teksta formātā, kā piemērā, vai arī varat izveidot ER diagrammu. Noteikti ir jāiekļauj aprakstā relāciju tipi.
+•	Izveidojiet datu bāzi un tabulas :
+o	Pieslēdzieties savam DB serverim. Izveidojiet jaunu datu bāzi, izmantojot operatoru CREATE DATABASE.
+o	Izveidojiet tabulas, izmantojot CREATE TABLE IF NOT EXISTS. Pievērsiet uzmanību IF NOT EXISTS daļai : tā nav obligāta, un citās datu bāzēs tādas daļas DDL operatoros var arī nebūt. Tā ir ērta, jo DB nemet kļūdu, mēģinot izveidot jau eksistējošu objektu; bet ar to ir jāuzmanās, jo var nodomāt, ka objekts ir izveidots ar jauniem laukiem, bet nekas netiks izdarīts, un paliks vecs objekts ar vecu lauku sarakstu.
+●	Tabulu veidošanas operatoros uzreiz iekļaujiet constraints : katrā tabulā jābūt primary key, kā arī detail tabulā jābūt foreign key constraint uz master tabulu.
+● Kādam laukam tīšam iedodiet pie veidošanas nekorektu nosaukumu un datu tipu. Līdz ar to iekļaujiet pēc tabulu veidošanas arī tabulu mainīšanas operatorus ALTER TABLE, kuros izlabojiet visu kā vajag.
+●	Izveidojiet arī kādu CHECK tipa constraint uz kādu no laukiem. Tas varētu būt, piemēram, mājdzīvnieka veids, lai tas varētu būt tikai viens no konkrēta definēta saraksta, piemēram : pet_type IN ('cat', 'dog', 'rat', 'turtle', 'bird', 'fish'). To varat paveikt gan ar ALTER operātoru, gan pie tabulas veidošanas, pēc izvēles.
+● NB! Veidojot datu bāzes tabulas, neveidojiet indeksus ! Tabulām šobrīd jābūt neindeksētām.
+•	Aizpildiet tabulas ar testa datiem, lai katrā ir vismaz daži ieraksti. Savā piemērā es pievienotu kādas 3 audzētavas, un kādu 5-7 mājdzīvniekus, lai ir dažāda tipa mājdzīvnieki, lai ir kāda audzētava kurā būs dzimuši vairāki dzīvnieki, un kāda arī kurā nav neviena, kā arī lai ir nezināmas izcelsmes mājdzīvnieks. Izmantojiet, kā jau zināt, INSERT operatoru.
+
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.

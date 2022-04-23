@@ -1,0 +1,12 @@
+﻿Nodarbība 03
+Uzdevums 2 : Darbs ar teksta datiem
+Darbs ar tekstu, dažas funkcijas
+Šajā uzdevumā varēsit izmēģināt darbu ar teksta datu tipiem. Kā redzat no lekcijas, tie ir vairāki. No savas pieredzes varu ieteikt izmantot VARCHAR tipu, jo tam ir pietiekoši augts pieļaujama teksta apjoma limits, kā arī tas izmanto tikai tik daudz atmiņas, cik reāli teksta jūs padodat.
+•	Izveidojiet tabulu ar vienu lauku. Izmantojiet varchar datu tipu.
+•	Aizpildiet tabulu ar teksta datiem, izmantojot INSERT komandu. Varat izmantot funkciju concat, padodot tai dažādus datu tipus.
+•	Atlasiet datus, atfiltrējot ar operātora LIKE palīdzību : https://www.mysqltutorial.org/mysql-like/
+•	Pamēģiniet arī NOT LIKE. Pamēģiniet dažādas meklēšanas maskas, gan ar %, gan ar _ simboliem.
+LIKE ir ļoti ērti un bieži izmantojams teksta meklēšanas / filtrēšanas operātors. Tā priekšrocība ir vienkāršība, bet trūkums -- arī vienkāršība :). Tā meklēšanas iespējas ir ļoti ierobežotas, un sarēžģītākas loģikas īstenošanai tas īsti neder. Mūsdienu programmēšanas valodas atbalsta regular expressions, un MySQL nav izņēmums. Regular expression ļauj definēt sarežģītus meklējama teksta paraugus (patterns), izmatojot standartizētu notāciju. Par MySQL regular expressions atbalstu var gūt priekšstātu, piemēram, te : https://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx
+•	Pamēģiniet atlasīt tekstu, atfiltrējot ar REGEXP operātora palīdzību. Izmēģiniet dažādus patterns.
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
+

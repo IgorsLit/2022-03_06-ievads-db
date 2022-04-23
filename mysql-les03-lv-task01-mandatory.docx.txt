@@ -1,0 +1,15 @@
+﻿Nodarbība 03
+Uzdevums 1 : Datu tipu izmantošana
+Darbs ar dažādiem datu tipiem
+Datu tipi programmēšanā ir pamatjēdziens. Vārds "computer" ir cēlies no darbības vārda "compute", un tiešā, burtiksā tulkojumā latviski tas ir "skaitļotājs". Latviski vārds "dators" ir cēlies no vārda "dati". Viss kas notiek datorā pēc būtības ir liela apjoma digitalu datu skaitļošana.
+Mūsdienu programmēšanas valodas operē ar vairākiem datu pamattipiem, kuri ir pietiekoši abstrakti un labi nodrošina programmēšanas vajadzības. Kā jau lekcijā bija minēts, MySQL vidē ir trīs galvenās kategorijas : skaitliskie tipi ; datuma / laika tipi ; teksta tipi.
+Veidojot datu bāzi, is svarīgi apzināties, kurš datu tips ir vajadzīgs katram tabulas laukam. Lai labāk saprastu datu tipu ierobežojumus un atšķirības, izdariet savā shēmā šadas darbības :
+•	Izveidojiet tabulu ar vienu lauku. Izmantojiet smallint datu tipu.
+•	Izpildiet INSERT komandu, mēģinot saglabāt 70000.
+•	Tagat izpildiet šo pašu komadu, bet tā lai nav kļūda un vērtība tiek saglabāta. Pieļaujams gan mainīt datu tipu tabulā (te gan jāzin ALTER TABLE komanda), gan mainīt saglabājamo vērtību.
+•	Izpildiet vēl dažas INSERT komandas, saglābājot vērtības ar decimālu daļu, piemēram, 3.141592, 9.8, etc. Pārbaudiet rezultātus ar SELECT komandu.
+Var redzēt ka notika slepta datu tipu konversija. Tā ne vienmēr ir iespējama, sevišķi jāuzmanās ar datuma / laika tipiem, jo var gan saņemt kļūdu, gan, kas ir bīstāmāk -- kods tiks izpildīts, bet ar citu rezultātu, ne to ko programmētājs bija iedomājies.
+•	Konvertējiet tekstu uz datumu. Atlasiet savu dzimšanas datumu, izmantojot funkciju str_to_date . Funkcijas specifikācija pieejama, piemēram, te : 
+https://www.w3schools.com/mysql/func_mysql_str_to_date.asp
+•	Atlasiet savu un Abrahama Linkolna dzimšanas datumus, kā arī dienu skaitu starp šiem datumiem (funkcija datediff).
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
