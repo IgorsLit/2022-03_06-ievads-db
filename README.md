@@ -1,4 +1,4 @@
-# Data Bases for begine.
+# Data Bases for beginer.
 
 ## Theory, tasks, exercises.
 
@@ -7,8 +7,11 @@
 3. Log files, lessions examples *??les_example??.sql*.
 4. Tasks in files *mysql-les01-lv-task01-mandatory.docx* or *\*-task\*.txt*. 
 5. Exercises:
-   5.1. Log files *mysql-les??-lv-task01-mandatory.docx.sql* or *\*-task02-\*.sql*.
-   5.2. Source codes *\*.sql*.
-   5.3. Workbench *mysql-les??-lv-task01-mandatory.\*.sql* or *\*-taks01-\*.mwb*.
-   5.4. Other files *mysql-les??- \*.jpg* or others.
+   1. Log files *mysql-les??-lv-task01-mandatory.docx.sql* or *\*-task02-\*.sql*.
+   2. Source codes *\*.sql*.
+   3. Workbench *mysql-les??-lv-task01-mandatory.\*.sql* or *\*-taks01-\*.mwb*.
+   4. Other files *mysql-les??- \*.jpg* or others. 
 
+Info
+
+https://www.w3schools.com/mysql/default.asp 
