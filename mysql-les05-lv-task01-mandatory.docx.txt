@@ -1,0 +1,13 @@
+﻿Nodarbība 05
+Uzdevums 1 : Datu vaicājumu pamati
+Vaicājumi (Queries)
+Šajā praktiskajā nodarbībā jūs iegūsiet iemaņas datu izgūšanai ar vaicājumu palīdzību. Relāciju datu bāzēs šis ir galvenais datu piekļuves veids. Tiek izmantota SQL valoda, kuras nosaukumā ir vārds query -- Structured Query Language.
+•	Pieslēdzēties iepriekšējā nodarbībā izveidotajai datu bāzei.
+•	Uzrakstiet vienkāršu vaicājumu no vienas tabulas. Izmantojiet gan visu lauku izgūšanu (*), gan konkrētu lauku sarakstu.
+•	Uzrakstiet vaicājumu, izmantojot DISTINCT opciju.
+•	Sakārtojiet atlases datus ar ORDER BY.
+•	Atfiltrējiet datus ar WHERE nosacījumiem. Iekļaujiet vienu nosacījumu, tad pievienotjiet vēl vienu vai vairākus, izmantojot AND un OR operandus.
+Esiet uzmanīgi ar OR operandu. Labs stils ir izmantot iekavas, lai veidotu nepārprotamu izpildes loģiku. Lai ieraudzītu kā mainās izpildes loģika, ja nav izmantotas iekavas, izpildiet SAKILA datu bāzē šādus vaicājumus :
+o	select * from sakila.actor a where a.first_name = 'MORGAN' or a.first_name = 'SUSAN' and a.last_name = 'DAVIS';
+o	select * from sakila.actor a where a.first_name = 'MORGAN' and a.last_name = 'DAVIS' or a.first_name = 'SUSAN';
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.

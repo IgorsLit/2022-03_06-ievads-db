@@ -1,0 +1,9 @@
+﻿Nodarbība 05
+Uzdevums 2 : Datu vaicājumi, izpildes plāns, indeksēšana
+Vaicājumi, izpildes plāns (execution plan)
+•	Pieslēdzieties iepriekšējā nodarbībā izveidotajai datu bāzei. Izmantojiet MySQL Workbench.
+•	Uzrakstiet vaicājumu no divām tabulām, izmantojot primary key lauku master tabulā un foreign key lauku detail tabula, lai savienotu tabulas (JOIN daļa vaicājumā). Izpildiet vaicājumu.
+•	Pēc noklusējuma tiek parādīti atlasīti dati (Result Grid). Apskatiet, labajā pusē ir vertikāla izvēlne -- pirmā opcija ir Result Grid. Savukārt pēdējā ir Execution Plan, izmantojiet to lai ieraudzītu kā datu bāze izpilda jūsu vaicājumu.
+•	Izveidojiet indeksus abās tabulās, šobrīd tikai primary key laukiem. Izpildiet vaicājumu tagad, un apskaties izpildes plānu.
+•	Izveidojiet indeksu details tabulā foreign key laukam. Izpildiet un apskatiet izpildes plānu.
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
