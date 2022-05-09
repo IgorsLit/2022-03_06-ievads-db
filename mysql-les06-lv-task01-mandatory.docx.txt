@@ -1,0 +1,18 @@
+﻿mysql-les06-lv-task01-mandatory.docx
+
+Nodarbība 06
+Uzdevums 1 : Datu bāzes uzturēšana
+Datu bāzes objektu pievienošana, modificēšana, dzēšana
+Šajā praktiskajā nodarbībā jūs nostiprināsiet iegūtas iemaņas datu bāzes uzturēšanā. Veikt datu bāzes uzturēšanas darbus var divos veidos : izmantojot grafisku klientu, kā MySQL Workbench, un izmantojot skriptus ar DDL komandām. Grafiska klienta rīka izmantošana ir ērtāks veids, bet tas neļauj veikt izmaiņu uzlikšanu citās vidēs, līdz ar to profesionālajos projektos tiek izmantots otrs veids: saglabātus skriptus var ērti piegādāt un palaist vairākās datu bāzes instancēs.
+•	Pieslēdzieties datu bāzei ar MySQL Workbench.
+•	Izpildiet nodarbības prezentācijā aprakstītas darbības:
+o	izveidojiet jaunu modeli ar jaunām tabulām, saitēm (norādes atslēgām), indeksiem
+o	uzģenerējiet modeļa skriptus
+o	palaidiet skriptus lai izveidotu jaunus objektus
+o	modificējiet izveidotus objektus (izdzēsiet lauku tabulā, pievienojiet lauku tabulā u.tml.)
+•	Uzrakstiet skriptu ar DDL komandām:
+o	Tabulas veidošana kā citas tabulas kopija (CREATE TABLE AS SELECT)
+o	Tabulas modificēšana
+o	Indeksa veidošana
+o	Jebkādas citas jēgpilnas DDL komandas
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
