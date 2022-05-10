@@ -22,10 +22,13 @@ USE `education_db` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `education_db`.`edu_groups` (
   `id` TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(10) NULL COMMENT 'Grupas kods.',
+  `name` VARCHAR(10) NULL DEFAULT NULL COMMENT 'Grupas kods.',
+  `edu_year_num` TINYINT UNSIGNED NOT NULL DEFAULT '1',
+  `modifying_time` TIMESTAMP NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+AUTO_INCREMENT = 12
+DEFAULT CHARACTER SET = utf8mb4;
 
 CREATE UNIQUE INDEX `name_UNIQUE` ON `education_db`.`edu_groups` (`name` ASC) VISIBLE;
 
@@ -37,15 +40,14 @@ CREATE TABLE IF NOT EXISTS `education_db`.`students` (
   `id` TINYINT(1) NOT NULL AUTO_INCREMENT,
   `firstname` VARCHAR(20) NOT NULL,
   `lastname` VARCHAR(20) NOT NULL,
-  `groups_id` TINYINT UNSIGNED NOT NULL,
+  `groups_id` TINYINT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_students_groups`
     FOREIGN KEY (`groups_id`)
-    REFERENCES `education_db`.`edu_groups` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `education_db`.`edu_groups` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+AUTO_INCREMENT = 12
+DEFAULT CHARACTER SET = utf8mb4;
 
 CREATE INDEX `fk_students_groups_idx` ON `education_db`.`students` (`groups_id` ASC) VISIBLE;
 
