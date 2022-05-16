@@ -1,6 +1,6 @@
 # Data Bases for beginer.
 
-## Theory, tasks, exercises.
+## Theory, tasks, exercises (latvian language).
 
 1. Theory in fils *2022-7-mysql-tema??.pdf*.
 2. Dictionaries *mysql-les04-lv-terms-dict.docx* or *\*-dict\*.txt*
