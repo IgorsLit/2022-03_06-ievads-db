@@ -489,3 +489,63 @@ mysql> SELECT tst.name, tst.theme, tst.modifying_time, lvs.name, tsk.task_text, 
 +-----------------+----------------+---------------------+------------+-------------------------------------------------------------------+-----------+
 6 rows in set (0.013 sec)
 
+mysql> ALTER TABLE levels61 MODIFY COLUMN name ENUM('Videjais', 'Optimalais', 'Augstakais') DEFAULT 'Videjais';
+Query OK, 4 rows affected (0.471 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE tasks61 MODIFY COLUMN type ENUM('Daudzizveellu', 'Garais teksts') DEFAULT 'Daudzizveellu';
+ERROR 1265 (01000): Data truncated for column 'type' at row 6
+mysql> SELECT * FROM tasks61;
++----+----------------+-----------------+-------------------------------------------------------------------+-----------+
+| id | theme          | type            | task_text                                                         | levels_id |
++----+----------------+-----------------+-------------------------------------------------------------------+-----------+
+|  4 | Mainigie       | Daudzizveellu   | Izvelies mainigu tipus                                            |         1 |
+|  5 | Mainigie       | Daudzizveellu   | Kas ir integer?                                                   |         1 |
+|  6 | Mainigie       | Daudzizveellu   | Kas ir float?                                                     |         2 |
+|  7 | Ievade, izvade | Garais teksts   | Pieraksti programmas kodu, kura jaievdada divus veselus skaitlus. |         4 |
+|  8 | Ievade, izvade | Garais teksts   | Kas ir ievade?                                                    |         4 |
+|  9 | Ievade, izvade | Daudzdzizveellu | Izvelies kas ir izvade?                                           |         4 |
++----+----------------+-----------------+-------------------------------------------------------------------+-----------+
+6 rows in set (0.021 sec)
+
+mysql> UPDATE tasks61 SET type = 'Daudzizveellu' WHERE id = 9; 
+Query OK, 1 row affected (0.030 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> ALTER TABLE tasks61 MODIFY COLUMN type ENUM('Daudzizveellu', 'Garais teksts') DEFAULT 'Daudzizveellu';
+Query OK, 6 rows affected (0.390 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE tasks61 ADD COLUMN (last_updated TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
+Query OK, 0 rows affected (0.079 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM tasks61;
++----+----------------+---------------+-------------------------------------------------------------------+-----------+---------------------+
+| id | theme          | type          | task_text                                                         | levels_id | last_updated        |
++----+----------------+---------------+-------------------------------------------------------------------+-----------+---------------------+
+|  4 | Mainigie       | Daudzizveellu | Izvelies mainigu tipus                                            |         1 | 2022-05-16 20:38:48 |
+|  5 | Mainigie       | Daudzizveellu | Kas ir integer?                                                   |         1 | 2022-05-16 20:38:48 |
+|  6 | Mainigie       | Daudzizveellu | Kas ir float?                                                     |         2 | 2022-05-16 20:38:48 |
+|  7 | Ievade, izvade | Garais teksts | Pieraksti programmas kodu, kura jaievdada divus veselus skaitlus. |         4 | 2022-05-16 20:38:48 |
+|  8 | Ievade, izvade | Garais teksts | Kas ir ievade?                                                    |         4 | 2022-05-16 20:38:48 |
+|  9 | Ievade, izvade | Daudzizveellu | Izvelies kas ir izvade?                                           |         4 | 2022-05-16 20:38:48 |
++----+----------------+---------------+-------------------------------------------------------------------+-----------+---------------------+
+6 rows in set (0.020 sec)
+
+mysql> UPDATE tasks61 SET type = 'Garais teksts' WHERE id = 9;
+Query OK, 1 row affected (0.018 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM tasks61;
++----+----------------+---------------+-------------------------------------------------------------------+-----------+---------------------+
+| id | theme          | type          | task_text                                                         | levels_id | last_updated        |
++----+----------------+---------------+-------------------------------------------------------------------+-----------+---------------------+
+|  4 | Mainigie       | Daudzizveellu | Izvelies mainigu tipus                                            |         1 | 2022-05-16 20:38:48 |
+|  5 | Mainigie       | Daudzizveellu | Kas ir integer?                                                   |         1 | 2022-05-16 20:38:48 |
+|  6 | Mainigie       | Daudzizveellu | Kas ir float?                                                     |         2 | 2022-05-16 20:38:48 |
+|  7 | Ievade, izvade | Garais teksts | Pieraksti programmas kodu, kura jaievdada divus veselus skaitlus. |         4 | 2022-05-16 20:38:48 |
+|  8 | Ievade, izvade | Garais teksts | Kas ir ievade?                                                    |         4 | 2022-05-16 20:38:48 |
+|  9 | Ievade, izvade | Garais teksts | Izvelies kas ir izvade?                                           |         4 | 2022-05-16 20:40:22 |
++----+----------------+---------------+-------------------------------------------------------------------+-----------+---------------------+
+6 rows in set (0.007 sec)
