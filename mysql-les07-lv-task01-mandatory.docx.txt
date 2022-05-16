@@ -1,0 +1,13 @@
+﻿Nodarbība 07
+Uzdevums 1 : Datu manipulēšanas (DML) pamati
+INSERT, UPDATE, REPLACE, DELETE, COMMIT, ROLLBACK
+Šajā praktiskajā nodarbībā koncetrēsimies uz datu manipulēšanas pamatu apgūšanu un nostiprināšanu. SQL valoda tiek iedalīta divās principiālās daļās : DDL un DML. DDL = Data Definition Language, to izmanto datu bāzes objektu izveidošanai un uzturēšanai. DML = Data Manipulation Language, to izmanto darbam ar datiem.
+•	Pieslēdzieties iepriekšējā nodarbībā izveidotajai datu bāzei ar MySQL Workbench.
+•	Izpildiet šādu komandu : set autocommit = 0; Šis ir svarīgs datu bāžu koncepts -- sesija, commit un rollback. Kad jūs strādājat ar datu bāzi, pieslēgšanās brīdī tiek izveidota lietotāja sesija. Veicot izmaiņas, tās ir spēkā tikai jūsu sesijā līdz commit brīdim. Commit ir pēc būtības izmaiņu apstiprinājums, un pēc tā izmaiņas kļūst pieejamas visās pārējās sesijās. Ja notiek rollback, izmaiņas tiek atceltas -- tās pazūd no jūsu sesijas, un par tām nekad neviens neuzzinās citās sesijās. MySQL pēc noklusējuma ir nokonfigurēts autocommit=1, un jebkuras paveiktas izmaiņas tiek apstiprinātas, proti, notiek automātisks commit. Tas ir zināmā mērā ērti, jo nav iespējas aizmirst apstiprināt izmaiņas, bet -- pazūd arī iespēja uztaisīt rollback.
+•	Papildiniet datus ar INSERT komandu. Pārbaudiet šai pašā sesijā ka jūsu dati ir tabulā.
+•	Pieslēdzieties datubāzei no komandrindas. Pārbaudiet datus tabulā. Ieraudzīsiet ka te izmaiņas nav redzamas, jo nav izpildīts commit. Izpildiet pirmajā sesijā komandu commit; un apskatiet datus otrajā sesijā.
+•	Pamainiet datus ar REPLACE komandu; pietiek ar vienu ierakstu. Nenorādiet pilnu lauku sarakstu, tādā veidā pārliecinoties, ka pie šāda izsaukuma trūkstoši lauki tiks aizpildīti ar NULL vērtībām (apskatiet datus ar SELECT komandu). Izpildiet rollback; un apskatiet datus tagad.
+•	Pamainiet datus ar UPDATE komandu. Pietiek ar vienu ierakstu, vienu lauku.
+•	Izdzēsiet kādu ierakstu ar DELETE komandu.
+•	Uztaisiet commit vai rollback, pēc izvēles.
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.

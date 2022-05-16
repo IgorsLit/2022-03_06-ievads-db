@@ -1,0 +1,8 @@
+﻿Nodarbība 07
+Uzdevums 2 : Datu manipulēšana, mazliet sarežģītāk
+Vairāk INSERT, UPDATE iespēju
+•	Pieslēdzieties iepriekšējā nodarbībā izveidotajai datu bāzei ar MySQL Workbench.
+•	Izveidojiet tabulu ar citu nosaukumu, bet tādiem pašiem laukiem kā vienai no esošām tabulām.
+•	Aizpildiet šo tabulu ar datiem no avota (source) tabulas, izmantojot INSERT komandu ar sintaksi INSERT INTO... SELECT ... FROM.
+•	Tagad uzrakstiet UPDATE komandu, tā lai mainītu kādu lauku vienā tabulā ar šā lauka vērtību no cita ieraksta. Piemēram, piešķirt kādam sunim to pašu audzētavu, kurā piedzima cits suns. Izmantojiet internetu, lai atrastu piemērotāku Jums veidu kā to izdarīt, piemēram, var skatīties šajā lapā : https://stackoverflow.com/questions/1262786/mysql-update-query-based-on-select-query
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
