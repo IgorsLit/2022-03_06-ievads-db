@@ -1,0 +1,17 @@
+﻿Nodarbība 08
+Uzdevums 2 : Funkcijas, turpinājums
+Analītiskas funkcijas pilnā datu setā
+Kā jau minēju iepriekš, analītiskas funkcijas satur daudz iespēju. Pastāv iespēja noskaidrot analītiskas funkcijas vērtību kādā grupa, saglabājot atlasi no pilna datu seta, proti, neizmantojot GROUP BY, tādējādi saglabājot pilnu detalizācijas līmeni.
+•	Pieslēdzieties datu bāzei Sakila ar MySQL Workbench.
+•	Uzrakstiet vienkāršu vaicājumu, atlasot visus laukus no tabulas payment. Izpildiet to.
+•	Papildiniet vaicājumu, lai saņemtu tos pašus datus, proti, katru ierakstu, pluss vēl vienu vērtību -- katra klienta maksimālo maksājuma summu. Hint : izmantojiet šo analītisko funkciju šādā notācijā max(...) over(partition by ...).
+•	Varat turpināt eksperimentēt ar citām analītiskām funkcijām. Piemēram te ir pieejama informācija par tām : https://dev.mysql.com/doc/refman/8.0/en/window-functions-usage.html
+Custom veidotas funkcijas
+Izstrādes laikā bieži gadās ka nepieciešams izveidot custom funkciju, proti, tādu kura veic datu apstrādi pēc kāda specifiska algoritma. Te būs tādas funkcijas piemērs. Varat pamēģināt uzrakstīt un izveidot savu funkciju. Varat izveidot šo funkciju, pārliecināties ka MySQL Workbench to var redzēt pie saglabātām funkcijām, un pamēģināt izsaukt šo funkciju vaicājumā, vai nu no tabulas, padodot lauku vērtības kā parametrus, vai bez tabulas, padodot savas vērtības : select test_func(10, 5); . NB! Neaizmirstiet aizvietot datu bāzes (shēmas) nosaukumu ! Es izmantoju menagerie.
+DELIMITER $$
+drop function if exists menagerie.test_func $$
+create function menagerie.test_func (p_num1 int, p_num2 int) returns int no sql begin declare v_res int;
+ set v_res = p_num1 / p_num2; return v_res;
+end$$
+DELIMITER ;
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
