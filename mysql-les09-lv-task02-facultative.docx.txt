@@ -1,0 +1,6 @@
+Nodarbība 09
+Uzdevums 2 : Datu bāzes rezerves kopēšana (dumps)
+Database dump
+•	Palaidiet komandrindu.
+•	Palaidiet mysqldump komandu ar izvadu failā. Komandā būs jānorāda pieslēgšanas parametri, ja tas ir remote server -- arī host adresi un portu. Hint : labāk paņemiet mazu datu bāzi, kur ir maz tabulu un datu.
+•	Saglabājiet dump failu pasniedzēja norādītajā vietā.
