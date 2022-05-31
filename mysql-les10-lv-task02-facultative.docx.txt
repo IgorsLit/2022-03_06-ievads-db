@@ -1,0 +1,8 @@
+Nodarbība 10
+Uzdevums 2 : Tables Joins : Vaicājumu no vairākām savienotām tabulām
+Tables Joins
+•	Pieslēdzieties datu bāzei sakila ar MySQL Workbench.
+•	Izpētiet citas tabulas un relācijas, jeb saites (relations) starp tām.
+•	Uzrakstiet citus vaicājums, izmantojot dažāda tipa JOINus. Pie katra vaicājuma paskaidrojiet savu domu, ko ar to domājāt. Piekomentējiet arī katru JOIN, kāpēc tas ir tāds, kas ar to ir domāts.
+•	Komentārus SQL valodā raksta šādi: -- Vienas rindas komentārs : viss kas aiz dubultmīnusa līdz rindas beigām ir komentārs un tiek ignorēts pildot kodu /* Vienas vai vairāku rindu komentārs : viss teksts starp komentāra sākumu un beigām, lai vai cik rindas te arī būtu, tiek ignorēts izpildes laikā. */
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
