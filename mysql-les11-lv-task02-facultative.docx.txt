@@ -1,0 +1,6 @@
+Nodarbība 11
+Uzdevums 2 : Apakšvaicājumi
+Apakšvaicājumi
+Turpiniet apakšvaicājumu izmantošanas apgūšanu. Varat izmantot sarežģītāku datu bāzi, piemēram sakila. Atradiet informāciju internetā, kādus piemērus, forumus etc.; pielāgojiet saviem SQL vaicājumiem. Ļaujiet vaļu fantāzijas un radošumam ! Katru vaicājumu detalizēti komentējiet, lai ir skaidrs, kādus datus vēlējāties atlasīt.
+
+Saglabājiet savu kodu failā. Failu saglabājiet pasniedzēja norādītajā vietā.
